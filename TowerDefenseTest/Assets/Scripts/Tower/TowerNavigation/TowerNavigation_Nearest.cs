@@ -13,7 +13,7 @@ public class TowerNavigation_Nearest : TowerNavigation
 
         Enemy enemy = _enemy.OrderBy(e => (
             e.transform.position - transform.position).sqrMagnitude
-            ).FirstOrDefault();
+            ).First();
 
         return enemy.transform;
     }

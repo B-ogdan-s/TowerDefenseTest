@@ -16,10 +16,10 @@ MonoBehaviour:
   _towerData:
     _radius: 10
     _damage:
-      _baseValue: 2
-      _firstStep: 2
+      _baseValue: 5
+      _firstStep: 5
       _maxParameters:
-      - _maxVelue: 130
+      - _maxVelue: 160
         _maxStep: 75
     _attackSpeed:
       _baseValue: 0.5
@@ -28,7 +28,7 @@ MonoBehaviour:
       - _maxVelue: 5
         _maxStep: 75
     _costOfImprovement:
-      _baseValue: 15
+      _baseValue: 20
       _firstStep: 1
       _maxParameters:
       - _maxVelue: 900

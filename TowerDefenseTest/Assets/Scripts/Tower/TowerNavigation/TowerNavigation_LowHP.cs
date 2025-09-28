@@ -11,7 +11,13 @@ public class TowerNavigation_LowHP : TowerNavigation
             return null;
         }
 
-        Enemy enemy = _enemy.OrderBy(e => e.EnemyHealth).FirstOrDefault();
+        Debug.Log(_enemy.Count);
+        Enemy enemy = _enemy[0];
+        for (int i = 1; i < _enemy.Count; i++)
+        {
+            if(_enemy[i].EnemyHealth.HP < enemy.EnemyHealth.HP)
+                enemy = _enemy[i];
+        }
 
         return enemy.transform;
     }

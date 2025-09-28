@@ -32,7 +32,7 @@ MonoBehaviour:
       _baseValue: 3
       _firstStep: 3
       _maxParameters:
-      - _maxVelue: 230
+      - _maxVelue: 210
         _maxStep: 75
     _damage:
       _baseValue: 1

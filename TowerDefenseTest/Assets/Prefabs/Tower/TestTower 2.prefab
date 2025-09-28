@@ -473,7 +473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BaseTower
   _attackingTower: {fileID: 7153578853145575945}
   _towerShowData: {fileID: 4886357659765022404}
-  _towerNavigation: {fileID: 2800698228642088932}
+  _towerNavigation: {fileID: 4589582982950815241}
 --- !u!114 &7153578853145575945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,7 +497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6080663562750680007}
-  - component: {fileID: 2800698228642088932}
+  - component: {fileID: 4589582982950815241}
   - component: {fileID: 269428746534249431}
   m_Layer: 7
   m_Name: Navigation
@@ -521,7 +521,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 210830759690944712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2800698228642088932
+--- !u!114 &4589582982950815241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -530,9 +530,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6591783357329293797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e34c19abb371c47a68c5f4cefff8ea, type: 3}
+  m_Script: {fileID: 11500000, guid: aace44bf80af652469eb0909ffcaa909, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TowerNavigation_Nearest
+  m_EditorClassIdentifier: Assembly-CSharp::TowerNavigation_LowHP
   _rotateTransform: {fileID: 1828578907274042028}
   _sphereCollider: {fileID: 269428746534249431}
 --- !u!135 &269428746534249431
