@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb618dbaffbe7f84a80aa31b457abc16, type: 3}
+  m_Name: TowerSelectorData 003
+  m_EditorClassIdentifier: Assembly-CSharp::TowerSelectorData
+  _towerPrefab: {fileID: 7710707487237563393, guid: c21348da304dc7d4fbfd77a799f5a556, type: 3}
+  _towerData:
+    _radius: 10
+    _damage:
+      _baseValue: 2
+      _firstStep: 2
+      _maxParameters:
+      - _maxVelue: 130
+        _maxStep: 75
+    _attackSpeed:
+      _baseValue: 0.5
+      _firstStep: 0.5
+      _maxParameters:
+      - _maxVelue: 5
+        _maxStep: 75
+    _costOfImprovement:
+      _baseValue: 15
+      _firstStep: 1
+      _maxParameters:
+      - _maxVelue: 900
+        _maxStep: 75
+  _icon: {fileID: 21300000, guid: 4ecf8c6900f89d743abd045afdc75988, type: 3}
+  _price: 30
+  _name: laser gun
+  _description: attacks all enemies in a straight line, targets the nearest enemy
