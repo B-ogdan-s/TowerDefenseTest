@@ -19,13 +19,16 @@ public class Enemy : PoolObject
     private int _damage;
     private int _coin;
 
+    private bool _isDead = false;
+
     public Action<int> OnFinish;
     public Action<int> OnAddCoin;
-    public Action OnDead;
+    public Action<Enemy> OnDead;
 
 
     public void Initialize(EnemyData data, Waypoint _waypoint)
     {
+        _isDead = false;
         _waypointAgent.SetData(data.Speed, _waypoint);
         _enemyHealth.SetData(data.Health);
         _damage = data.Damage;
@@ -38,14 +41,18 @@ public class Enemy : PoolObject
         {
             DisableObject();
             OnFinish?.Invoke(_damage);
-            OnDead?.Invoke();
+            OnDead?.Invoke(this);
         }; 
 
         _enemyHealth.OnDead += ()=>
         {
+            if (_isDead)
+                return;
+            _isDead = true;
+
             DisableObject();
             OnAddCoin?.Invoke(_coin);
-            OnDead?.Invoke();
+            OnDead?.Invoke(this);
         };
     }
     private void OnDestroy()

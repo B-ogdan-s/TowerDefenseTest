@@ -52,10 +52,13 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void DeadEnemy()
+    private void DeadEnemy(Enemy enemy)
     {
+        enemy.OnDead = null;
         _enemyCount--;
         if (_enemyCount <= 0)
+        {
             OnClearAll?.Invoke();
+        }
     }
 }

@@ -40,12 +40,12 @@ public class AttackingTower : MonoBehaviour
     {
         while (_isAttack)
         {
+            yield return new WaitForSeconds(_rechargeTime);
+
             BaseProjectile bullet = _poolHandler.GetFreeObject(_bullet);
             bullet.transform.position = _spawnPosition.position;
             bullet.transform.rotation = _spawnPosition.rotation;
             bullet.Initialize(_damage);
-
-            yield return new WaitForSeconds(_rechargeTime);
         }
     }
 }

@@ -9,6 +9,7 @@ public class GameHandler : MonoBehaviour
     [Inject] private UI_Manager _uiManager;
     [Inject] private EnemySpawner _enemySpawner;
     [Inject] private TowerHandler _towerHandler;
+    [Inject] private TimeService _timeService;
 
     [Inject] private GameData_Wave _wave;
     [Inject] private GameData_Coin _coin;
@@ -44,6 +45,7 @@ public class GameHandler : MonoBehaviour
             UIManager = _uiManager,
             EnemySpawner = _enemySpawner,
             TowerHandler = _towerHandler,
+            TimeService = _timeService,
         };
 
         Dictionary<Type, GameState> states = new Dictionary<Type, GameState>
@@ -68,6 +70,7 @@ public class GameHandler : MonoBehaviour
             towerSelector_UI.SetCoin(_coin.Coins);
         };
         _hp.OnHPChanged += () => game_UI.SetHealth(_hp.MaxHP, _hp.CurrentHP);
+        _hp.OnDead += () => _SM.ChangeState(typeof(GameState_Loss));
 
         _wave.OnWaveChanged += () =>
         {
@@ -121,6 +124,7 @@ public class GameHandler : MonoBehaviour
 
         _coin.OnCoinChanged = null;
         _hp.OnHPChanged = null;
+        _hp.OnDead = null;
 
         _SM.CurrentState.Exit();
 

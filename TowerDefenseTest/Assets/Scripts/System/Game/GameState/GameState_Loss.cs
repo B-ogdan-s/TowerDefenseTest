@@ -7,14 +7,13 @@ public class GameState_Loss : GameState
     }
     public override void Enter()
     {
-        Time.timeScale = 0f;
+        _data.TimeService.Pause();
         Lost_UI ui = _data.UIManager.OpenPanel<Lost_UI>();
 
         base.Enter();
     }
     public override void Exit()
     {
-        Time.timeScale = 1f;
         base.Exit();
     }
 }

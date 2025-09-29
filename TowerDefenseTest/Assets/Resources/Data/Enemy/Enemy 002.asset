@@ -17,26 +17,20 @@ MonoBehaviour:
     _speed:
       _baseValue: 0.7
       _firstStep: 0.7
-      _maxParameters:
-      - _maxVelue: 10
-        _maxStep: 75
-      - _maxVelue: 16
-        _maxStep: 500
+      _maxVelue: 10
+      _maxStep: 75
     _coins:
       _baseValue: 5
       _firstStep: 5
-      _maxParameters:
-      - _maxVelue: 85
-        _maxStep: 75
+      _maxVelue: 85
+      _maxStep: 75
     _health:
       _baseValue: 8
       _firstStep: 8
-      _maxParameters:
-      - _maxVelue: 370
-        _maxStep: 75
+      _maxVelue: 370
+      _maxStep: 75
     _damage:
       _baseValue: 1
       _firstStep: 1
-      _maxParameters:
-      - _maxVelue: 20
-        _maxStep: 75
+      _maxVelue: 20
+      _maxStep: 75

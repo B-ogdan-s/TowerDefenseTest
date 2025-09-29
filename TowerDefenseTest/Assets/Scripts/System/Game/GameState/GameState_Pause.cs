@@ -8,14 +8,13 @@ public class GameState_Pause : GameState
 
     public override void Enter()
     {
-        Time.timeScale = 0f;
+        _data.TimeService.Pause();
         Pause_UI ui = _data.UIManager.OpenPanel<Pause_UI>();
 
         base.Enter();
     }
     public override void Exit()
     {
-        Time.timeScale = 1f;
         base.Exit();
     }
 }

@@ -18,21 +18,18 @@ MonoBehaviour:
     _damage:
       _baseValue: 1
       _firstStep: 1
-      _maxParameters:
-      - _maxVelue: 75
-        _maxStep: 75
+      _maxVelue: 75
+      _maxStep: 75
     _attackSpeed:
       _baseValue: 1.5
       _firstStep: 1.5
-      _maxParameters:
-      - _maxVelue: 8
-        _maxStep: 75
+      _maxVelue: 8
+      _maxStep: 75
     _costOfImprovement:
       _baseValue: 8
       _firstStep: 1
-      _maxParameters:
-      - _maxVelue: 500
-        _maxStep: 75
+      _maxVelue: 500
+      _maxStep: 75
   _icon: {fileID: 21300000, guid: 75c9c3b4f789fef4eb6fd8fdcde1eba7, type: 3}
   _price: 10
   _name: Machine gun

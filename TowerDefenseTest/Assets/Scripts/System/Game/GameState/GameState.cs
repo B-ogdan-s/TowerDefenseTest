@@ -7,6 +7,7 @@ public struct GameStateData
     public UI_Manager UIManager;
     public EnemySpawner EnemySpawner;
     public TowerHandler TowerHandler;
+    public TimeService TimeService;
 }
 
 public abstract class GameState : BaseState

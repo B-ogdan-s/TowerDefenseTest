@@ -20,7 +20,6 @@ public abstract class TowerNavigation : MonoBehaviour
             if (_isPresent == value)
                 return;
             _isPresent = value;
-            Debug.LogWarning(_isPresent);
             if(IsPressent)
                 OnTargetAppeared?.Invoke();
             else
