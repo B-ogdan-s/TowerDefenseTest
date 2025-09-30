@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 using System.Collections.Generic;
 using System.Linq;
 namespace WaypointSystem {
@@ -88,7 +88,7 @@ namespace WaypointSystem {
 
         private void OnDrawGizmos() {
             Gizmos.color = pointColor;
-            Handles.color = lineColor;
+            //Handles.color = lineColor;
             Gizmos.DrawSphere(transform.position, sphereRadius);
 
             if (next == null) return;
@@ -104,7 +104,7 @@ namespace WaypointSystem {
 
         private void DrawNormalPath() {
 
-            Handles.DrawAAPolyLine(lineSize, transform.position, next.transform.position); // 4f is thickness
+            //Handles.DrawAAPolyLine(lineSize, transform.position, next.transform.position); // 4f is thickness
             DrawArrow(transform.position, next.transform.position);
         }
 
@@ -119,8 +119,8 @@ namespace WaypointSystem {
             Vector3 left = Quaternion.LookRotation(direction) * Quaternion.Euler(0, -150, 0) * Vector3.forward;
 
 
-            Handles.DrawAAPolyLine(lineSize, arrowTail, arrowTail + right * arrowSize);
-            Handles.DrawAAPolyLine(lineSize, arrowTail + left * arrowSize);
+            //Handles.DrawAAPolyLine(lineSize, arrowTail, arrowTail + right * arrowSize);
+            //Handles.DrawAAPolyLine(lineSize, arrowTail + left * arrowSize);
 
 
         }
@@ -131,9 +131,9 @@ namespace WaypointSystem {
             List<Vector3> points = curve.GetSampledPoints(transform.position, next.transform.position, CurveResolution);
 
             if (points.Count > 1) {
-                for (int i = 1; i < points.Count; i++) {
-                    Handles.DrawAAPolyLine(lineSize, points[i - 1], points[i]);
-                }
+                //for (int i = 1; i < points.Count; i++) {
+                //    Handles.DrawAAPolyLine(lineSize, points[i - 1], points[i]);
+                //}
 
                 // Optional: draw arrow at end
                 DrawArrow(points[^2], points[^1]);
