@@ -18,8 +18,8 @@ MonoBehaviour:
     _damage:
       _baseValue: 3
       _firstStep: 3
-      _maxVelue: 100
-      _maxStep: 75
+      _maxVelue: 16
+      _maxStep: 10
     _attackSpeed:
       _baseValue: 0.9
       _firstStep: 0.9
@@ -28,9 +28,9 @@ MonoBehaviour:
     _costOfImprovement:
       _baseValue: 12
       _firstStep: 1
-      _maxVelue: 700
-      _maxStep: 75
+      _maxVelue: 150
+      _maxStep: 10
   _icon: {fileID: 21300000, guid: 6c737dcf84612d844ab42bde226f0c7c, type: 3}
-  _price: 20
+  _price: 25
   _name: Cannon
   _description: has a moderate attack speed, attacks enemies with lower health

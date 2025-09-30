@@ -18,8 +18,8 @@ MonoBehaviour:
     _damage:
       _baseValue: 5
       _firstStep: 5
-      _maxVelue: 160
-      _maxStep: 75
+      _maxVelue: 26
+      _maxStep: 10
     _attackSpeed:
       _baseValue: 0.5
       _firstStep: 0.5
@@ -28,9 +28,9 @@ MonoBehaviour:
     _costOfImprovement:
       _baseValue: 20
       _firstStep: 1
-      _maxVelue: 900
-      _maxStep: 75
+      _maxVelue: 150
+      _maxStep: 10
   _icon: {fileID: 21300000, guid: 4ecf8c6900f89d743abd045afdc75988, type: 3}
-  _price: 30
+  _price: 40
   _name: laser gun
   _description: attacks all enemies in a straight line, targets the nearest enemy

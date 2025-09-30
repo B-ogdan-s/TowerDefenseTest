@@ -6610,15 +6610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7943aa2ad450a9c4290121a2bef81bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  _enemyUpdateCount:
-    _baseValue: 10
-    _firstStep: 10
-    _maxVelue: 70
-    _maxStep: 75
-  _enemies:
-  - {fileID: 11400000, guid: b2945460efb211c419026bbc47f3db70, type: 2}
-  - {fileID: 11400000, guid: 6c241f55878b6af459e8d7ec9762b0cb, type: 2}
-  - {fileID: 11400000, guid: dbed51857c30d34448d0257345a6b928, type: 2}
+  _spawnerData: {fileID: 11400000, guid: fc08d1ed7cce6c447be307c73a110ecc, type: 2}
   _waypoint: {fileID: 1719260738}
   _spawnSpeed: 0.5
 --- !u!4 &1568317638

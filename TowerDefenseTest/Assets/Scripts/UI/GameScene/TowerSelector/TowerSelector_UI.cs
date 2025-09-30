@@ -27,8 +27,8 @@ public class TowerSelector_UI : UI_Panel
             var panel = Instantiate(_panelPrefab, _contentTransform);
             panel.SetData(towerData, (data) => 
             { 
-                OnTowerSelected?.Invoke(data.TowerPrefab, data.TowerData); 
                 OnBuy?.Invoke(data.Price);
+                OnTowerSelected?.Invoke(data.TowerPrefab, data.TowerData); 
             });
 
             _panels.Add(panel);

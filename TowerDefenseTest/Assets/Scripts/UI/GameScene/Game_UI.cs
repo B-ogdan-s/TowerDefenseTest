@@ -46,7 +46,7 @@ public class Game_UI : UI_Panel
     }
     public void SetSpeed(int value)
     {
-        _speedText.text = $"X: {value}";
+        _speedText.text = $"Time: X{value}";
     }
 
     public void OpenStartWave(bool value)

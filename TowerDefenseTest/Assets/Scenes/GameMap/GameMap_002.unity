@@ -6819,7 +6819,7 @@ MonoBehaviour:
   _gameHandler: {fileID: 1906853502}
   _enemySpawner: {fileID: 1568317637}
   _towerHandler: {fileID: 650637654}
-  _timeService: {fileID: 0}
+  _timeService: {fileID: 1909319884}
   _uiManager: {fileID: 2071469122}
 --- !u!1 &1441887271
 GameObject:
@@ -7433,14 +7433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7943aa2ad450a9c4290121a2bef81bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  _enemyUpdateCount:
-    _baseValue: 0
-    _firstStep: 0
-    _maxParameters: []
-  _enemies:
-  - {fileID: 11400000, guid: b2945460efb211c419026bbc47f3db70, type: 2}
-  - {fileID: 11400000, guid: 6c241f55878b6af459e8d7ec9762b0cb, type: 2}
-  - {fileID: 11400000, guid: dbed51857c30d34448d0257345a6b928, type: 2}
+  _spawnerData: {fileID: 11400000, guid: fc08d1ed7cce6c447be307c73a110ecc, type: 2}
   _waypoint: {fileID: 1719260738}
   _spawnSpeed: 0.5
 --- !u!4 &1568317638
@@ -7627,6 +7620,7 @@ Transform:
   m_Children:
   - {fileID: 1535486521}
   - {fileID: 1906853501}
+  - {fileID: 1909319883}
   - {fileID: 650637653}
   - {fileID: 1568317638}
   m_Father: {fileID: 0}
@@ -9431,7 +9425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d5fc953b5bc7e4e87985681b7afe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameDataInstaller
-  _baseCoin: 10
+  _baseCoin: 20
   _baseHP: 100
 --- !u!1 &1906853500
 GameObject:
@@ -9477,6 +9471,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806278d88e04cfa48b3133182e6dba88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameHandler
+--- !u!1 &1909319882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909319883}
+  - component: {fileID: 1909319884}
+  m_Layer: 0
+  m_Name: TimeService
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1909319883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909319882}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1604460668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1909319884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909319882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97407ded54168554c956d8be3820cbce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeService
+  _timeScalers: 0100000002000000050000000a000000
 --- !u!1 &1972757917
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,6 @@ public class TowerNavigation_LowHP : TowerNavigation
             return null;
         }
 
-        Debug.Log(_enemy.Count);
         Enemy enemy = _enemy[0];
         for (int i = 1; i < _enemy.Count; i++)
         {

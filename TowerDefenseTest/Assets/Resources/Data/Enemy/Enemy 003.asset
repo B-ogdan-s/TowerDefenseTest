@@ -20,15 +20,15 @@ MonoBehaviour:
       _maxVelue: 14
       _maxStep: 75
     _coins:
-      _baseValue: 4
+      _baseValue: 1
       _firstStep: 1
-      _maxVelue: 80
-      _maxStep: 75
+      _maxVelue: 8
+      _maxStep: 10
     _health:
       _baseValue: 3
       _firstStep: 3
-      _maxVelue: 210
-      _maxStep: 75
+      _maxVelue: 28
+      _maxStep: 10
     _damage:
       _baseValue: 1
       _firstStep: 1

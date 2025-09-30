@@ -6,8 +6,7 @@ using Zenject;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private UpdatableParameter _enemyUpdateCount;
-    [SerializeField] List<EnemySpawnData> _enemies;
+    [SerializeField] private EnemySpawnerData _spawnerData;
     [SerializeField] private Waypoint _waypoint;
     [SerializeField] private float _spawnSpeed;
 
@@ -28,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemy()
     {
-        int spawnCount = _enemyUpdateCount.GetIntValue(_wave.Wave);
+        int spawnCount = _spawnerData.GetEnemyCount(_wave.Wave);
         _enemyCount = spawnCount;
         int count = 0;
         float time = 1f / _spawnSpeed;
@@ -37,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(time);
 
-            EnemySpawnData enemySpawnData = _enemies[Random.Range(0, _enemies.Count)];
+            EnemySpawnData enemySpawnData = _spawnerData.GetEnemySpawnData();
             Enemy enemy = _poolHandler.GetFreeObject(enemySpawnData.Prefab);
 
             EnemyData data = enemySpawnData.Data.ModifyData(_wave.Wave);

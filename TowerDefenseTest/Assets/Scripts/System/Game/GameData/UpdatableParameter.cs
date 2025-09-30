@@ -27,8 +27,6 @@ public class UpdatableParameter
 
         float value = _firstStep + (level+1) * (_maxVelue - _baseValue) / (_maxStep-1);
 
-        Debug.Log($"{level} : {value}");
-
         return value;
     }
 }
